@@ -5,13 +5,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Point;
 
-/**
- * 
- * @author Doaa Ashour
- * This class is to represent the checker piece object. 
- * It handles its movement, color and properties.
- * 
- */
 
 public class ColorBall  
 {

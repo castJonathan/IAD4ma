@@ -14,12 +14,6 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-/**
- * 
- * @author Doaa Ashour
- * This class handles all game GUI.
- *
- */
 
 public class BoardView extends View 
 {
@@ -207,7 +201,7 @@ public class BoardView extends View
 		
 		// Draw the background...
 			Paint background = new Paint();
-			background.setColor(Color.rgb(105, 105, 105));
+			background.setColor(Color.rgb(255, 255, 255));
 			canvas.drawRect(0, 0, iWidth, iHeight, background);
 
 	
@@ -230,7 +224,7 @@ public class BoardView extends View
 			//draw time
 			
 			
-			canvas.drawText("Copyright doaaashour � 2010", 5,iHeight+35, background);
+			canvas.drawText("Primer proyecto IA", 5,iHeight+35, background);
 	 
 			String str="",str2="";
 			//draw the balls on the canvas

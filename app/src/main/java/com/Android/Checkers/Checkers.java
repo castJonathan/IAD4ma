@@ -4,7 +4,6 @@ package com.Android.Checkers;
 
 
 
-import android.R.color;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -46,7 +45,7 @@ public class Checkers extends Activity
         SharedPreferences settings = getSharedPreferences(PREF_BOARD, MODE_PRIVATE);
         
         if(settings.getString("redBoard", "").length()==0)
-        	continueButton.setBackgroundColor(color.background_dark);
+        	continueButton.setBackgroundColor(0xFF00FF00);
         else
         {
         	continueButton.setOnClickListener(new OnClickListener()
@@ -55,7 +54,6 @@ public class Checkers extends Activity
 			@Override
 			public void onClick(View arg0) 
 			{
-				// TODO Auto-generated method stub
 				continueGame();
 				
 			}
@@ -70,7 +68,6 @@ public class Checkers extends Activity
 			@Override
 			public void onClick(View arg0) 
 			{
-				// TODO Auto-generated method stub
 				exit();
 				
 			}
@@ -84,8 +81,7 @@ public class Checkers extends Activity
 			@Override
 			public void onClick(View arg0) 
 			{
-				// TODO Auto-generated method stub
-				showMessage("Developed by doaaashour © 2010.");
+				showMessage("IA JC");
 				
 			}
         	
@@ -108,7 +104,7 @@ public class Checkers extends Activity
         
         if(redBoard.length()==0)
         {
-        	showToast("No Game Previously Saved.");
+        	showToast("No hay juego guardado.");
         	return;
         }
         

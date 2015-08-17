@@ -38,4 +38,4 @@ android:layout_width="fill_parent"
 android:layout_height="wrap_content"
 android:text="@string/exit_label" />
 </LinearLayout>
-</LinearLayout><!-- From: file:/C:/Users/Jonathan/AndroidStudioProjects/androidchecker/app/src/main/res/layout/main.xml -->
+</LinearLayout><!-- From: file:/C:/Users/Jonathan/Documents/GitHub/IAD4ma/app/src/main/res/layout/main.xml -->

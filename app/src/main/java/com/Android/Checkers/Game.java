@@ -7,12 +7,6 @@ package com.Android.Checkers;
 
 
 import java.util.Random;
-
-/**
- * @author Doaa Ashour
- *  This activity handles all the game logic.
- */
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -49,19 +43,19 @@ public class Game extends Activity
 		{
 			for (int j = 0; j < 8; j++) 
 			 {	 					 
-				 //color black squares
+				 //color de las celdas negras
 				 if((j%2==0 && i%2==0) || (i%2!=0 && j%2!=0))
 				   {
 					 board[i][j]=0;
 					 continue;
 				   }
 				
-				 //color white squares
-				if(i<3) //black player
+				 //color de las celdas blancas
+				if(i<3) //jugador de negras
 				{
 				 board[i][j]=2;
 				}
-				else if(i>4) //red player
+				else if(i>4) //jugador de rojas
 				{
 					 board[i][j]=1;
 				}
@@ -70,14 +64,14 @@ public class Game extends Activity
 					board[i][j]=0;
 				}
 				
-				//initialize kings
+				//inicializacion de reinas
 			    isKing[i][j]=0;
 
 				 
 			 }
  
 		    
-		    //initialize black
+		    //inicializacion de negras
 		    isBlackVisible[i]=true;
 		}
 		
@@ -142,7 +136,7 @@ public class Game extends Activity
 			}
 		else
 			{
-			//new game
+			//nuevo juego
 		
 				init();
 			}
@@ -157,7 +151,7 @@ public class Game extends Activity
 	{
 		super.onPause();
 		saveGame();
-	};
+	}
 	
 	protected void continueGame()
 	{
@@ -174,7 +168,7 @@ public class Game extends Activity
 	protected boolean move(int tempX,int tempY,int selX,int selY)
 	{
 
-			//check if valid
+			//verificar si es valido
 			
 			if(isJump(tempX,tempY,selX,selY))
 			 {
@@ -203,7 +197,7 @@ public class Game extends Activity
 			 }//end of isJump
 			else if(!isMove(tempX,tempY,selX,selY))
             	{
-            	   showToast("Invalid Move.");
+            	   showToast("Movimiento invalido");
             	   return false;
             	}
 		
@@ -329,13 +323,6 @@ public class Game extends Activity
 		blackXIndices[i]=X;
 		blackYIndices[i]=Y;
 		board[Y][X]=2;
-		//showToast("Your Turn.");
-/*		   try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}*/
 	}
 	
 	private boolean canJump(int x,int y,int i)
@@ -1022,7 +1009,7 @@ public class Game extends Activity
 		e.commit();
 		
 		if(!gameEnd)
-			showToast("Game Saved");
+			showToast("Juego Guardado");
 	}
 	
 	@Override
@@ -1075,12 +1062,12 @@ public class Game extends Activity
 		 if(countRed==0)
 			 {
 			 	gameEnd=true;
-			 	showMessage("I win! :P");		 
+			 	showMessage("Perdiste!");
 			 }
 		 else if(countBlack==0)
 			 {
 			 	gameEnd=true;
-			 	showMessage("You Win! :)");
+			 	showMessage("Ganaste!");
 			 }
 		 
 	
@@ -1089,7 +1076,7 @@ public class Game extends Activity
 			 if(!redMovesExist())
 			 {
 				 gameEnd=true;
-				 showMessage("I win! :P");	
+				 showMessage("Perdiste");
 			 }
 		 }
 		 else //computer has no available moves
@@ -1099,12 +1086,12 @@ public class Game extends Activity
 			 if(!redMovesExist())
 			 {
 				 gameEnd=true;
-				 showMessage("Draw!");	
+				 showMessage("Saca");
 			 }
 			 else
 			 {
 				 gameEnd=true;
-				 showMessage("You Win! :)");
+				 showMessage("Ganaste");
 				 
 			 }
 		 }

@@ -4,12 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-/**
- * 
- * @author Doaa Ashour
- * This Activity is used to display messages at the end of a game.
- *
- */
+
 
 public class MessageDisplay extends Activity 
 
